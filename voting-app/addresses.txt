@@ -1,0 +1,46 @@
+Starting migrations...
+======================
+> Network name:    'ganache'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+2_deploy_contracts.js
+=====================
+
+
+   Deploying 'Ballot'
+   ------------------
+
+   > transaction hash:    0x7547d8fc20f8644cb54d6a47be13d7bbb9c4cac6c8c8b993c51f3a8ff7c7d453
+
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x4AcfdBf97562EfBEAD3bA3F04970d2C93d2FF611
+   > block number:        1
+   > block timestamp:     1678785745
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.996631091875
+   > gas used:            998195 (0xf3b33)
+   > gas price:           3.375 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003368908125 ETH
+
+
+
+   Deploying 'Voter'
+   -----------------
+
+   > transaction hash:    0xda73aa1095238544789045eb6c2ef9a8571168193915ec3e03cd4c350acbc20c
+   > total cost:          0.00221231860323744 ETH     
+
+Ballot contract address: 0x4AcfdBf97562EfBEAD3bA3F04970d2C93d2FF611
+
+Voter contract address: 0x3Aad3320Da4908CEcB4489C575982dd1CbF1aB34
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00558122672823744 ETH
+
+Summary
+=======
+> Total deployments:   2> Final cost:          0.00558122672823744 ETH   
