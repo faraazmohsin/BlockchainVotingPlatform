@@ -2,6 +2,21 @@ import React, { useState, useEffect } from "react";
 import Web3 from 'web3';
 import Ballot from "../../../src/build/contracts/Ballot.json";
 import Voter from "../../../src/build/contracts/Voter.json";
+import styled from 'styled-components';
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const MainTitle = styled.div`
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+`;
 
 export function Home() {
   const [web3, setWeb3] = useState(undefined);
@@ -80,7 +95,11 @@ export function Home() {
   
   return (
     <div>
-      <h2>Vote for your favorite candidate:</h2>
+      <TitleContainer>
+      <MainTitle>
+      Vote for your favorite candidate:
+      </MainTitle>
+      </TitleContainer>
       <form onSubmit={handleVote}>
         {renderCandidates()}
         <button type="submit">Vote</button>

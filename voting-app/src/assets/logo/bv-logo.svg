@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355.65 359.32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #96f5d4;
+      }
+
+      .cls-3 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .cls-4 {
+        stroke: #a41043;
+      }
+
+      .cls-5 {
+        fill: #a41043;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <line class="cls-4" x1="1.56" y1="60.63" x2="97.06" y2="2.56"/>
+    <line class="cls-4" x1="255.37" y1="62.93" x2="350.87" y2="4.87"/>
+    <polyline class="cls-4" points="354.1 257.67 350.8 259.67 350.14 260.07 258.59 315.74"/>
+    <line class="cls-3" x1="5.17" y1="313.54" x2="1.56" y2="315.74"/>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <path class="cls-5" d="m.18,58.35v259.78h259.77V58.35H.18Zm255.19,255.19H4.76V62.93h250.61v250.61Z"/>
+    <path class="cls-5" d="m95.67.29v4.58h255.19v250.61h-.07v4.19l-.65.4h5.3V.29H95.67Zm0,62.64h4.58v-4.58h-4.58v4.58Z"/>
+  </g>
+  <g id="Layer_7" data-name="Layer 7">
+    <rect class="cls-2" x="4.76" y="62.93" width="250.61" height="250.61"/>
+    <polygon class="cls-1" points="345.06 4.87 257.06 58.35 11.44 58.35 98.76 4.87 345.06 4.87"/>
+    <polygon class="cls-1" points="259.95 63.74 350.87 8.47 350.8 256.13 259.95 311.4 259.95 63.74"/>
+  </g>
+  <g id="Layer_6" data-name="Layer 6">
+    <polygon class="cls-5" points="60.82 108.67 95.17 95.17 95.17 184.4 129.88 235.9 164.59 184.4 164.59 95.17 199.31 108.39 199.31 191.83 129.88 291.52 60.82 191.83 60.82 108.67"/>
+  </g>
+</svg>
