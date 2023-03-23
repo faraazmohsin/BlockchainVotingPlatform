@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { TextField } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
+import Web3 from 'web3';
+import VoterContract from '../../contracts/Voter.json';
 
 const PageContainer = styled.div`
     display: flex;
@@ -45,8 +47,12 @@ const ButtonContainer = styled(motion.div)`
 
 const GIFContainer = styled(motion.div)`
     position: absolute;
-    margin: 33vh 0 0 61vw;
+    margin: 30vh 0 0 58vw;
 `;
+
+// alternate gif: https://media.giphy.com/media/qeFPEYUQcOUjXd4KZr/giphy.gif
+// https://media.giphy.com/media/zTjHXPniJp5JOpWizW/giphy.gif
+// https://media.giphy.com/media/mwMprviPPDistnxRNx/giphy.gif
 
 export function Register(_props) {
 
@@ -65,9 +71,19 @@ export function Register(_props) {
     };
 
     // Button validation
-    const handleSubmit = () => {
+    let web3;
+
+    const handleSubmit = async () => {
+        const provider = new Web3.providers.HttpProvider(
+            'http://localhost:7545'
+        );
+        web3 = new Web3(provider);
+        const voterAddress = '0x3CEf4e41d0868633D6cd967233523634F8e876EB';
+        const voterContract = new web3.eth.Contract(VoterContract.abi, voterAddress);
+        const accounts = await web3.eth.getAccounts();
+        await voterContract.methods.registerUser(web3.utils.utf8ToHex(name), web3.utils.utf8ToHex(email)).send({ from: accounts[0] });
         console.log(`Name: ${name}, Email: ${email}`);
-    };
+    };    
 
     return (
         <div>
@@ -135,18 +151,18 @@ export function Register(_props) {
                     />
                 </EmailContainer>
 
-                <ButtonContainer>
+                <ButtonContainer whileHover={{scale: 1.1}}>
                     <Button
                         variant="contained"
                         color="#F9E79F"
                         size="large"
                         onClick={handleSubmit}
-                    > Submit
+                    > Register
                     </Button>
                 </ButtonContainer>
 
                 <GIFContainer>
-                <img src="https://media.giphy.com/media/qeFPEYUQcOUjXd4KZr/giphy.gif" alt="" style={{ width: "350px", height: "300px", borderRadius: "25%" }}/>
+                <img src="https://media.giphy.com/media/zTjHXPniJp5JOpWizW/giphy.gif" alt="" style={{ width: "400px", height: "350px", borderRadius: "25%" }}/>
                 </GIFContainer>
 
             </PageContainer>

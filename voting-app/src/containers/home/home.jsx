@@ -44,13 +44,13 @@ export function Home() {
     const initContracts = async (_web3) => {
       const _ballotContract = new _web3.eth.Contract(
         Ballot.abi,
-        "0x4AcfdBf97562EfBEAD3bA3F04970d2C93d2FF611"
+        "0xb23C549218C4669a02B7594e6Ae939D6D4806F43"
       );
       setBallotContract(_ballotContract);
   
       const _voterContract = new _web3.eth.Contract(
         Voter.abi,
-        "0x3Aad3320Da4908CEcB4489C575982dd1CbF1aB34"
+        "0x3CEf4e41d0868633D6cd967233523634F8e876EB"
       );
       setVoterContract(_voterContract);
     };

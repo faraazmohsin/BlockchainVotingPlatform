@@ -17,6 +17,7 @@
     "babel-runtime": "^6.26.0",
     "ethers": "^6.1.0",
     "framer-motion": "^10.8.4",
+    "mongodb": "^5.1.0",
     "particles.js": "^2.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^1.5.2",
@@ -32,7 +33,9 @@
     "react-typing-animation": "^1.6.2",
     "react-typist": "^2.0.5",
     "solc": "^0.8.19",
+    "stream-browserify": "^3.0.0",
     "styled-components": "^5.3.9",
+    "url": "^0.11.0",
     "web-vitals": "^2.1.4",
     "web3": "^1.8.2"
   },

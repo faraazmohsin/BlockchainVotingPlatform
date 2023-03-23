@@ -8,6 +8,9 @@ contract Voter {
     // Reference to the ballot contract
     Ballot public ballot;
 
+    // Event to notify when a new user registers
+    event NewUserRegistered(address userAddress, bytes32 name, bytes32 email);
+
     // Struct to store user information
     struct User {
         bytes32 name;
@@ -28,6 +31,8 @@ contract Voter {
         require(!users[msg.sender].registered, "User has already registered");
 
         users[msg.sender] = User(_name, _email, true);
+
+        emit NewUserRegistered(msg.sender, _name, _email);
     }
 
     // Function to cast a vote
