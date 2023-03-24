@@ -21,6 +21,8 @@ contract Voter {
     // Mapping to store user information by Ethereum address
     mapping(address => User) public users;
 
+    mapping(bytes32 => mapping(bytes32 => address)) public nameEmailToAddress;
+
     // Constructor to set the reference to the ballot contract
     constructor(address _ballot) {
         ballot = Ballot(_ballot);
@@ -29,7 +31,9 @@ contract Voter {
     // Function to register a user
     function registerUser(bytes32 _name, bytes32 _email) public {
         require(!users[msg.sender].registered, "User has already registered");
+        require(nameEmailToAddress[_name][_email] == address(0), "User with the same name and email already exists");
 
+        nameEmailToAddress[_name][_email] = msg.sender;
         users[msg.sender] = User(_name, _email, true);
 
         emit NewUserRegistered(msg.sender, _name, _email);

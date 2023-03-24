@@ -78,10 +78,18 @@ export function Register(_props) {
             'http://localhost:7545'
         );
         web3 = new Web3(provider);
-        const voterAddress = '0x39F45Ba69C16928e63195bD813fE37Df1d7C3Fb4';
+        const voterAddress = '0xe5f728bDc39A4aC4dCCa1fe209687Ad9Ea9EF044';
         const voterContract = new web3.eth.Contract(VoterContract.abi, voterAddress);
         const accounts = await web3.eth.getAccounts();
-        await voterContract.methods.registerUser(web3.utils.utf8ToHex(name), web3.utils.utf8ToHex(email)).send({ from: accounts[0] });
+
+        const nameHash = web3.utils.utf8ToHex(name);
+        const emailHash = web3.utils.utf8ToHex(email);
+        const existingUser = await voterContract.methods.nameEmailToAddress(nameHash, emailHash).call();
+        if (existingUser !== "0x0000000000000000000000000000000000000000") {
+            alert(`User with the same name and email has already registered`);
+            return;
+        }
+        await voterContract.methods.registerUser(web3.utils.utf8ToHex(name), web3.utils.utf8ToHex(email)).send({ from: accounts[0], gas: 200000 });
         console.log(`Name: ${name}, Email: ${email}`);
     };
 
