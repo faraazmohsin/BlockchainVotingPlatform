@@ -78,7 +78,7 @@ export function Register(_props) {
             'http://localhost:7545'
         );
         web3 = new Web3(provider);
-        const voterAddress = '0x3CEf4e41d0868633D6cd967233523634F8e876EB';
+        const voterAddress = '0x39F45Ba69C16928e63195bD813fE37Df1d7C3Fb4';
         const voterContract = new web3.eth.Contract(VoterContract.abi, voterAddress);
         const accounts = await web3.eth.getAccounts();
         await voterContract.methods.registerUser(web3.utils.utf8ToHex(name), web3.utils.utf8ToHex(email)).send({ from: accounts[0] });

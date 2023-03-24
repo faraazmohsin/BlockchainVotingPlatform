@@ -53,4 +53,9 @@ contract Ballot {
 
         return totalVotes;
     }
+
+    // Function to get the list of candidates
+    function getCandidates() public view returns (string[] memory) {
+        return candidates;
+    }
 }

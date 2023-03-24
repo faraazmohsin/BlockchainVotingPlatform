@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Web3 from 'web3';
-import Ballot from "../../../src/build/contracts/Ballot.json";
-import Voter from "../../../src/build/contracts/Voter.json";
+import Ballot from "../../../src/contracts/Ballot.json";
+import Voter from "../../../src/contracts/Voter.json";
 import styled from 'styled-components';
 
 const TitleContainer = styled.div`
@@ -41,43 +41,50 @@ export function Home() {
       return _web3;
     };
   
-    const initContracts = async (_web3) => {
+    const initContracts = async (_web3, _candidates) => {
       const _ballotContract = new _web3.eth.Contract(
         Ballot.abi,
-        "0xb23C549218C4669a02B7594e6Ae939D6D4806F43"
+        "0x607EbAB9422C0079AD6b994652462db202e0e8Da",
+        { data: Ballot.bytecode, arguments: [_candidates]}
       );
       setBallotContract(_ballotContract);
   
       const _voterContract = new _web3.eth.Contract(
         Voter.abi,
-        "0x3CEf4e41d0868633D6cd967233523634F8e876EB"
+        "0x39F45Ba69C16928e63195bD813fE37Df1d7C3Fb4"
       );
       setVoterContract(_voterContract);
     };
   
     const getCandidates = async () => {
-      const _candidates = await ballotContract.methods.candidates().call();
-      setCandidates(_candidates);
+      if (web3 && ballotContract) {
+        const _candidates = await ballotContract.methods.getCandidates().call();
+        const candidatesStr = _candidates.map((candidate) => web3.utils.hexToUtf8(candidate.name));
+        setCandidates(candidatesStr);
+      }
     };
   
     const init = async () => {
       const _web3 = await initWeb3();
       await initContracts(_web3);
-      await getCandidates();
-      await getTotalVotes();
-    };
+      if (ballotContract) {
+        await getCandidates();
+        await getTotalVotes();
+      }
+    };    
   
     init();
-  }, []);
+  }, []);  
   
   const handleVote = async () => {
-    await voterContract.methods.castVote(selectedCandidate).send({
+    await ballotContract.methods.castVote(selectedCandidate).send({
       from: accounts[0],
     });
     await getTotalVotes();
   };
 
   const renderCandidates = () => {
+    console.log('candidates:', candidates);
     return candidates.map((candidate, index) => {
       return (
         <div key={index}>

@@ -17,8 +17,8 @@ if (typeof window !== 'undefined' && typeof window.ethereum !== 'undefined') {
   web3 = new Web3(provider);
 }
 
-const ballotAddress = '0xb23C549218C4669a02B7594e6Ae939D6D4806F43'; // Replace with the deployed ballot contract address
-const voterAddress = '0x3CEf4e41d0868633D6cd967233523634F8e876EB'; // Replace with the deployed voter contract address
+const ballotAddress = '0x607EbAB9422C0079AD6b994652462db202e0e8Da'; // Replace with the deployed ballot contract address
+const voterAddress = '0x39F45Ba69C16928e63195bD813fE37Df1d7C3Fb4'; // Replace with the deployed voter contract address
 
 const ballotContract = new web3.eth.Contract(BallotContract.abi, ballotAddress);
 const voterContract = new web3.eth.Contract(VoterContract.abi, voterAddress);
