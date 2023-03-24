@@ -32,10 +32,10 @@ contract Ballot {
 
     // Function to cast a vote
     function castVote(string memory _candidate) public {
-        require(block.timestamp >= startTime, "Election has not started yet");
-        require(block.timestamp <= endTime, "Election has ended");
-        require(!voters[msg.sender], "You have already cast your vote");
-        require(votesReceived[_candidate] < maxVotesPerVoter, "This candidate has already reached the maximum number of votes");
+        require(block.timestamp >= startTime, "Election has not started yet"); //Might remove
+        require(block.timestamp <= endTime, "Election has ended");  //Might remove
+        require(!voters[msg.sender], "You have already cast your vote");    //Might remove
+        require(votesReceived[_candidate] < maxVotesPerVoter, "This candidate has already reached the maximum number of votes");    //Might remove
 
         votesReceived[_candidate]++;
         voters[msg.sender] = true;
@@ -43,6 +43,7 @@ contract Ballot {
         emit VoteCast(msg.sender, _candidate);
     }
 
+    //Might remove
     // Function to get the total number of votes
     function getTotalVotes() public view returns (uint256) {
         uint256 totalVotes = 0;
