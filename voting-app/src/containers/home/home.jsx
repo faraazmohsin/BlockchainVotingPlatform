@@ -102,11 +102,19 @@ export function Home() {
   }, []);  
   
   const handleVote = async () => {
+
+    // Validation to check if radio button is clicked before submitting
+    if (!selectedCandidate) {
+      alert('Please select a candidate to vote for.');
+      return;
+    }
+
     await ballotContract.methods.castVote(selectedCandidate).send({
       from: accounts[0],
     });
     //await getTotalVotes();
   };
+  
 
   const renderCandidates = () => {
     console.log('candidates:', candidates);

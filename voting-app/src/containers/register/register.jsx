@@ -77,6 +77,13 @@ export function Register(_props) {
         const provider = new Web3.providers.HttpProvider(
             'http://localhost:7545'
         );
+
+        // Validation to check if required fields are empty
+        if (!name || !email) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
         web3 = new Web3(provider);
         const voterAddress = '0xe5f728bDc39A4aC4dCCa1fe209687Ad9Ea9EF044';
         const voterContract = new web3.eth.Contract(VoterContract.abi, voterAddress);
@@ -85,6 +92,8 @@ export function Register(_props) {
         const nameHash = web3.utils.utf8ToHex(name);
         const emailHash = web3.utils.utf8ToHex(email);
         const existingUser = await voterContract.methods.nameEmailToAddress(nameHash, emailHash).call();
+
+        // Validation to check if user 'name' and 'email' are already registered
         if (existingUser !== "0x0000000000000000000000000000000000000000") {
             alert(`User with the same name and email has already registered`);
             return;
