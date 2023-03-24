@@ -152,13 +152,7 @@ export function Register(_props) {
                 </EmailContainer>
 
                 <ButtonContainer whileHover={{scale: 1.1}}>
-                    <Button
-                        variant="contained"
-                        color="#F9E79F"
-                        size="large"
-                        onClick={handleSubmit}
-                    > Register
-                    </Button>
+                <button onClick={{handleSubmit}} style={{cursor: 'pointer', border: 'none', color: "black", width: '150px', height: '60px', padding: '10px', borderRadius: '40px', fontSize: '1.5rem', fontFamily:  'Poppins'}} type="submit">REGISTER</button>
                 </ButtonContainer>
 
                 <GIFContainer>

@@ -39,6 +39,7 @@ const SubText = styled(motion.div)`
     background-color: #F9E79F;
     font-family: 'Press Start 2P', cursive;
     margin: 10vh 0 0 2vw;
+    color: #A41043;
 `;
 
 const SubTextTwo = styled(motion.div)`
@@ -48,6 +49,7 @@ const SubTextTwo = styled(motion.div)`
     background-color: #F9E79F;
     font-family: 'Press Start 2P', cursive;
     margin: 12vh 0 0 2vw;
+    color: #A41043;
 `;
 
 const RegText = styled(motion.div)`
@@ -57,6 +59,7 @@ const RegText = styled(motion.div)`
     background-color: #F9E79F;
     font-family: 'Press Start 2P', cursive;
     margin: 14vh 0 0 2vw;
+    color: #A41043;
 `;
 
 const Button = styled(motion.button)`

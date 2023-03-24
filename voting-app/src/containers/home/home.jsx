@@ -32,7 +32,7 @@ const VotingContainer = styled(motion.div)`
 
 const ButtonContainer = styled(motion.div)`
     position: absolute;
-    margin: 15vh 0 0 2vw;
+    margin: 12vh 0 0 2vw;
 `;
 
 const CanContainer = styled(motion.div)`
