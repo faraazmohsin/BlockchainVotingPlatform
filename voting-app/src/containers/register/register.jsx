@@ -83,7 +83,7 @@ export function Register(_props) {
         const accounts = await web3.eth.getAccounts();
         await voterContract.methods.registerUser(web3.utils.utf8ToHex(name), web3.utils.utf8ToHex(email)).send({ from: accounts[0] });
         console.log(`Name: ${name}, Email: ${email}`);
-    };    
+    };
 
     return (
         <div>
