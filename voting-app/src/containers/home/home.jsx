@@ -144,7 +144,7 @@ export function Home() {
             {renderCandidates()}
           </CanContainer>
           <ButtonContainer whileHover={{scale: 1.1}}>
-            <button style={{cursor: 'pointer', border: 'none', color: "black", width: '125px', height: '55px', padding: '10px', borderRadius: '40px', fontSize: '1.5rem', fontFamily:  'Poppins'}} type="submit">VOTE</button>
+            <button style={{cursor: 'pointer', border: 'none', color: "black", minWidth: '96px', height: '46px', padding: '16px 24px', borderRadius: '4px', fontSize: '0.875rem', fontFamily:  'Roboto', fontWeight: '500', boxShadow: '0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)', transition: 'background-color 0.3s ease'}} type="submit">VOTE</button>
           </ButtonContainer>
         </form>
       </VotingContainer>
