@@ -53,6 +53,10 @@ export function Home() {
   const [selectedCandidate, setSelectedCandidate] = useState("");
 
   useEffect(() => {
+
+    // Prevents user from going back *Crucial to stay on voting page and complete the process
+    window.history.pushState(null, null, `${window.location.pathname}?preventBack=true`);
+
     const initWeb3 = async () => {
       const _web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
       const _accounts = await _web3.eth.getAccounts();
