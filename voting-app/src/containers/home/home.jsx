@@ -37,11 +37,6 @@ const ButtonContainer = styled(motion.div)`
     margin: 12vh 0 0 2vw;
 `;
 
-const ButtonContainerTwo = styled(motion.div)`
-    position: absolute;
-    margin: 12vh 0 0 20vw;
-`;
-
 const CanContainer = styled(motion.div)`
   font-family: 'Poppins', sans-serif;
   font-size: 4rem;
