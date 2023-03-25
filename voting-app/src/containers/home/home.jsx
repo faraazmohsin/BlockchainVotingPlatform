@@ -68,7 +68,7 @@ export function Home() {
     const initContracts = async (_web3, _candidates) => {
       const _ballotContract = await new _web3.eth.Contract(
         Ballot.abi,
-        "0x431b3F1A29e6719d7412A411aa3C8c9f3E8508a9",
+        "0xd3916b9a9096915Ef04297D0F660Ec6efF48719a",
         { data: Ballot.bytecode, arguments: [_candidates, 1649990400, 1652582400, 2] }
       );
 
@@ -79,7 +79,7 @@ export function Home() {
   
       const _voterContract = await new _web3.eth.Contract(
         Voter.abi,
-        "0xe5f728bDc39A4aC4dCCa1fe209687Ad9Ea9EF044"
+        "0xF75c95E3f692fb561826f57026940C9F76C862Db"
       );
       setVoterContract(_voterContract);
     };
@@ -114,7 +114,7 @@ export function Home() {
     }
 
     await ballotContract.methods.castVote(selectedCandidate).send({
-      from: accounts[0],
+      from: accounts[1],
     });
     //await getTotalVotes();
   };

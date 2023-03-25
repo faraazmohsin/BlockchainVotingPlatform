@@ -6,6 +6,7 @@ import { useState } from "react";
 import { TextField } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 import Web3 from 'web3';
+import { Link } from 'react-router-dom';
 import VoterContract from '../../contracts/Voter.json';
 
 const PageContainer = styled.div`
@@ -85,21 +86,24 @@ export function Register(_props) {
         }
 
         web3 = new Web3(provider);
-        const voterAddress = '0xe5f728bDc39A4aC4dCCa1fe209687Ad9Ea9EF044';
+        const voterAddress = '0xF75c95E3f692fb561826f57026940C9F76C862Db';
         const voterContract = new web3.eth.Contract(VoterContract.abi, voterAddress);
         const accounts = await web3.eth.getAccounts();
 
         const nameHash = web3.utils.utf8ToHex(name);
         const emailHash = web3.utils.utf8ToHex(email);
-        const existingUser = await voterContract.methods.nameEmailToAddress(nameHash, emailHash).call();
+        console.log(`Name hash: ${nameHash}, Email hash: ${emailHash}`);
 
-        // Validation to check if user 'name' and 'email' are already registered
-        if (existingUser !== "0x0000000000000000000000000000000000000000") {
+        if (await voterContract.methods.isUserRegistered(nameHash, emailHash).call()) {
             alert(`User with the same name and email has already registered`);
             return;
         }
-        await voterContract.methods.registerUser(web3.utils.utf8ToHex(name), web3.utils.utf8ToHex(email)).send({ from: accounts[0], gas: 200000 });
-        console.log(`Name: ${name}, Email: ${email}`);
+        else {
+
+            await voterContract.methods.registerUser(nameHash, emailHash).send({ from: accounts[1], gas: 250000 });
+            console.log(`Name: ${name}, Email: ${email}`);
+
+        }
     };
 
     return (
@@ -169,13 +173,15 @@ export function Register(_props) {
                 </EmailContainer>
 
                 <ButtonContainer whileHover={{scale: 1.1}}>
-                    <Button
-                        variant="contained"
-                        color="#F9E79F"
-                        size="large"
-                        onClick={handleSubmit}
-                    > Register
-                    </Button>
+                    <Link to={name && email ? "/home" : ""} style={{ textDecoration: 'none'}}>
+                        <Button
+                            variant="contained"
+                            color="#F9E79F"
+                            size="large"
+                            onClick={handleSubmit}
+                        > Register
+                        </Button>
+                    </Link>
                 </ButtonContainer>
 
                 <GIFContainer>
