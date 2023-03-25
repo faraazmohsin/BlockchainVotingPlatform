@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import Typed from 'react-typed';
 import { motion } from "framer-motion";
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const PageContainer = styled.div`
     display: flex;
@@ -35,6 +37,11 @@ const ButtonContainer = styled(motion.div)`
     margin: 12vh 0 0 2vw;
 `;
 
+const ButtonContainerTwo = styled(motion.div)`
+    position: absolute;
+    margin: 12vh 0 0 20vw;
+`;
+
 const CanContainer = styled(motion.div)`
   font-family: 'Poppins', sans-serif;
   font-size: 4rem;
@@ -50,7 +57,6 @@ export function Home() {
   const [candidates, setCandidates] = useState(
     localStorage.getItem("candidates") ? JSON.parse(localStorage.getItem("candidates")) :[] 
     );
-  const [selectedCandidate, setSelectedCandidate] = useState("");
 
   useEffect(() => {
 
@@ -105,6 +111,9 @@ export function Home() {
     init();
   }, []);  
   
+  const navigate = useNavigate();
+  const [selectedCandidate, setSelectedCandidate] = useState(null);
+  
   const handleVote = async () => {
 
     // Validation to check if radio button is clicked before submitting
@@ -114,9 +123,10 @@ export function Home() {
     }
 
     await ballotContract.methods.castVote(selectedCandidate).send({
-      from: accounts[1],
+      from: accounts[2],
     });
-    //await getTotalVotes();
+    
+    navigate('/end');
   };
   
 
@@ -139,6 +149,8 @@ export function Home() {
       );
     });
   };
+
+  const isVoteDisabled = !selectedCandidate;
   
   return (
     <PageContainer>
@@ -156,11 +168,13 @@ export function Home() {
             {renderCandidates()}
           </CanContainer>
           <ButtonContainer whileHover={{scale: 1.1}}>
-            <button style={{cursor: 'pointer', border: 'none', color: "black", minWidth: '96px', height: '46px', padding: '16px 24px', borderRadius: '4px', fontSize: '0.875rem', fontFamily:  'Roboto', fontWeight: '500', boxShadow: '0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)', transition: 'background-color 0.3s ease'}} type="submit">VOTE</button>
+            <Link onClick={handleVote} to="/end">
+              <button style={{cursor: 'pointer', border: 'none', color: "black", minWidth: '96px', height: '46px', padding: '16px 24px', borderRadius: '4px', fontSize: '0.875rem', fontFamily:  'Roboto', fontWeight: '500', boxShadow: '0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)', transition: 'background-color 0.3s ease'}} type="submit" disabled={isVoteDisabled}>VOTE</button>
+            </Link>
           </ButtonContainer>
         </form>
       </VotingContainer>
     </div>
     </PageContainer>
   );
-};
+}
