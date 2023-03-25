@@ -99,7 +99,6 @@ export function Home() {
       await initContracts(_web3, candidates);
       if (ballotContract) {
         await getCandidates();
-        //await getTotalVotes();
       }
     };    
   

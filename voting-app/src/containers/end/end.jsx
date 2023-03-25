@@ -47,7 +47,7 @@ export function End(_props) {
                         >
                             <EndText/>
                     </Typed>
-                    <img src="https://media.giphy.com/media/5xtDarmwsuR9sDRObyU/giphy.gif" style={{ width: '700px', height: '400px', borderRadius: "50px"}} />
+                    <img alt='gif' src="https://media.giphy.com/media/5xtDarmwsuR9sDRObyU/giphy.gif" style={{ width: '700px', height: '400px', borderRadius: "50px"}} />
                 </EndContainer>
             </PageContainer>
         </div>
