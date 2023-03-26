@@ -49,7 +49,6 @@ contract Voter {
         ballot.castVote(_candidate);
     }
 
-    // Remove function
     // Function to check if the voter is eligible to vote
     function isEligible() public view returns (bool) {
         return users[msg.sender].registered && !ballot.voters(msg.sender);

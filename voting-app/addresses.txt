@@ -4,7 +4,7 @@ Compiling your contracts...
 > Compiling .\contracts\Voter.sol
 > Artifacts written to C:\Users\faraa\Documents\GitHub\BlockchainVotingPlatform\voting-app\build\contracts
 > Compiled successfully using:
-   - solc: 0.8.19+commit.7dd6d404.Emscripten.clang   
+   - solc: 0.8.19+commit.7dd6d404.Emscripten.clang
 
 
 Starting migrations...
@@ -19,38 +19,38 @@ Starting migrations...
 
    Replacing 'Ballot'
    ------------------
-   > transaction hash:    0x4c6142b07d4ec3b5b88f398546fec360b54f6f7602464bda8145203f4fda6ab0
+   > transaction hash:    0xea4a901e32d702e9f608de7c66710a26e893043ae6581d380b647c5e9b88b23a
    > Blocks: 0            Seconds: 0
-   > contract address:    0x4eed570394e79a243B01612850A3B20c0f4E8812
-   > block number:        191
-   > block timestamp:     1679693916
+   > contract address:    0x4AcfdBf97562EfBEAD3bA3F04970d2C93d2FF611
+   > block number:        1
+   > block timestamp:     1679815260
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.89948999913058539       
-   > gas used:            1119061 (0x111355)
-   > gas price:           2.500000008 gwei
+   > balance:             99.997613264125
+   > gas used:            707181 (0xaca6d)
+   > gas price:           3.375 gwei
    > value sent:          0 ETH
-   > total cost:          0.002797652508952488 ETH   
+   > total cost:          0.002386735875 ETH
 
 
    Replacing 'Voter'
    -----------------
-   > transaction hash:    0x0e4d554fb82012be2a3b18f0b9530ed88361bfe6f9fb30319fa330a328546677
+   > transaction hash:    0xd911404762c429028129275fdeba1338b0c23014782f27f9bc3f0dcf249cd9d0
    > Blocks: 0            Seconds: 0
-   > contract address:    0x2fC61C6578B78FCf5CcA25c62960AE7E2ab48D95
-   > block number:        192
-   > block timestamp:     1679693916
+   > contract address:    0x3Aad3320Da4908CEcB4489C575982dd1CbF1aB34
+   > block number:        2
+   > block timestamp:     1679815261
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.897471291624125526      
+   > balance:             99.994957744479441235
    > gas used:            807483 (0xc523b)
-   > gas price:           2.500000008 gwei
+   > gas price:           3.288638455 gwei
    > value sent:          0 ETH
-   > total cost:          0.002018707506459864 ETH   
+   > total cost:          0.002655519645558765 ETH
 
-Ballot contract address: 0x4eed570394e79a243B01612850A3B20c0f4E8812
-Voter contract address: 0x2fC61C6578B78FCf5CcA25c62960AE7E2ab48D95
+Ballot contract address: 0x4AcfdBf97562EfBEAD3bA3F04970d2C93d2FF611
+Voter contract address: 0x3Aad3320Da4908CEcB4489C575982dd1CbF1aB34
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.004816360015412352 ETH        
+   > Total cost:     0.005042255520558765 ETH
 
 
 1679607257_deploy_new_contracts.js
@@ -58,38 +58,38 @@ Voter contract address: 0x2fC61C6578B78FCf5CcA25c62960AE7E2ab48D95
 
    Replacing 'Ballot'
    ------------------
-   > transaction hash:    0xf49ccee55f1dfb74f7b0781ac0837ae79a0db1c316526386afeca16e30044e90
+   > transaction hash:    0xcbb3c4d2687e2b980b2828accddfd8ca1d9d398afa2c9b8bb26f127142f9074b
    > Blocks: 0            Seconds: 0
-   > contract address:    0x89e7419c7d9073F5510687a47aeAa182611B3C2d
-   > block number:        193
-   > block timestamp:     1679693916
+   > contract address:    0x18118284D64536872C78Fd3EDF9B0Fb959500641
+   > block number:        3
+   > block timestamp:     1679815261
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.894673639115173038      
-   > gas used:            1119061 (0x111355)
-   > gas price:           2.500000008 gwei
+   > balance:             99.992685046760394196
+   > gas used:            707181 (0xaca6d)
+   > gas price:           3.213742619 gwei
    > value sent:          0 ETH
-   > total cost:          0.002797652508952488 ETH   
+   > total cost:          0.002272697719047039 ETH
 
 
    Replacing 'Voter'
    -----------------
-   > transaction hash:    0x082402f4b849d690f31049f97817337ea1d6cd5c77cef3006f7d79da4dd6afd9
+   > transaction hash:    0x007e90ee86af0cc453b4818600ad90e0a16ec6e40077961f42ba4cf1dbe01007
    > Blocks: 0            Seconds: 0
-   > contract address:    0x18C271250dc6B1B92439c6cCa657737Db55ba960
-   > block number:        194
-   > block timestamp:     1679693916
+   > contract address:    0x7c0Eca55F7876e1033921Bb8a923a32D3D34c835
+   > block number:        4
+   > block timestamp:     1679815261
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.892654931608713174      
+   > balance:             99.99014688786732823
    > gas used:            807483 (0xc523b)
-   > gas price:           2.500000008 gwei
+   > gas price:           3.143297002 gwei
    > value sent:          0 ETH
-   > total cost:          0.002018707506459864 ETH   
+   > total cost:          0.002538158893065966 ETH
 
-Ballot contract address: 0x89e7419c7d9073F5510687a47aeAa182611B3C2d
-Voter contract address: 0x18C271250dc6B1B92439c6cCa657737Db55ba960
+Ballot contract address: 0x18118284D64536872C78Fd3EDF9B0Fb959500641
+Voter contract address: 0x7c0Eca55F7876e1033921Bb8a923a32D3D34c835
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.004816360015412352 ETH        
+   > Total cost:     0.004810856612113005 ETH
 
 
 1679608787_next_deployed_contracts.js
@@ -97,38 +97,38 @@ Voter contract address: 0x18C271250dc6B1B92439c6cCa657737Db55ba960
 
    Replacing 'Ballot'
    ------------------
-   > transaction hash:    0x9c2da7601e5c3fb6d2f90f3403fbd640f6f839f5a471362dd1e186983d4af62a
+   > transaction hash:    0x08e007a4dfc30c195ec3341c03cd9b32e35073afae034401e1a10ff0622f9adc
    > Blocks: 0            Seconds: 0
-   > contract address:    0xb3565E8D02df80f3a85F85d383e9b64855ba720c
-   > block number:        195
-   > block timestamp:     1679693917
+   > contract address:    0xa8eF73Cf5EA58b71b57B93285cd5120a70D6d54c
+   > block number:        5
+   > block timestamp:     1679815261
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.889857279099760686      
-   > gas used:            1119061 (0x111355)
-   > gas price:           2.500000008 gwei
+   > balance:             99.987967211738481619
+   > gas used:            707181 (0xaca6d)
+   > gas price:           3.082204031 gwei
    > value sent:          0 ETH
-   > total cost:          0.002797652508952488 ETH   
+   > total cost:          0.002179676128846611 ETH
 
 
    Replacing 'Voter'
    -----------------
-   > transaction hash:    0xe42fd818346aafbf69f2fb433222d2429e7fe75a58a23e44aa6c78775851e186
+   > transaction hash:    0x79ebf560f54eacf3069180914ee7a14e839b7264657de963d527e515481e1364
    > Blocks: 0            Seconds: 0
-   > contract address:    0x1e17DbDd6C144960a26cfc575B5aD8ab0014D6E7
-   > block number:        196
-   > block timestamp:     1679693917
+   > contract address:    0x85Ffe1358B30f8A122BDeA5dcedDfFE090452AF5
+   > block number:        6
+   > block timestamp:     1679815261
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.887838571593300822      
+   > balance:             99.985524784697413312
    > gas used:            807483 (0xc523b)
-   > gas price:           2.500000008 gwei
+   > gas price:           3.024741129 gwei
    > value sent:          0 ETH
-   > total cost:          0.002018707506459864 ETH   
+   > total cost:          0.002442427041068307 ETH
 
-Ballot contract address: 0xb3565E8D02df80f3a85F85d383e9b64855ba720c
-Voter contract address: 0x1e17DbDd6C144960a26cfc575B5aD8ab0014D6E7
+Ballot contract address: 0xa8eF73Cf5EA58b71b57B93285cd5120a70D6d54c
+Voter contract address: 0x85Ffe1358B30f8A122BDeA5dcedDfFE090452AF5
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.004816360015412352 ETH        
+   > Total cost:     0.004622103169914918 ETH
 
 
 1679653846_deploy_new_contracts2.js
@@ -136,38 +136,38 @@ Voter contract address: 0x1e17DbDd6C144960a26cfc575B5aD8ab0014D6E7
 
    Replacing 'Ballot'
    ------------------
-   > transaction hash:    0x47e1a3cf3e7bcff8ba22d627533e5cb86baa5e8d15a33fd51273488ab6225bb6
+   > transaction hash:    0x6a0f56f76cd0eb0b53d6a7a11ca0ef2b48c1db52f9fa3b9aa445b89b1a45c510
    > Blocks: 0            Seconds: 0
-   > contract address:    0x7D23aB17E2300ECd3594FEbFb501cCFd8210aacB
-   > block number:        197
-   > block timestamp:     1679693917
+   > contract address:    0xF9EDECBa2b586E22219B7c27488f72A222a0873A
+   > block number:        7
+   > block timestamp:     1679815262
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.885040919084348334      
-   > gas used:            1119061 (0x111355)
-   > gas price:           2.500000008 gwei
+   > balance:             99.983420986824058777
+   > gas used:            707181 (0xaca6d)
+   > gas price:           2.974907235 gwei
    > value sent:          0 ETH
-   > total cost:          0.002797652508952488 ETH   
+   > total cost:          0.002103797873354535 ETH
 
 
    Replacing 'Voter'
    -----------------
-   > transaction hash:    0xb53543caa9d27f314c7213af63eb89bd6e9824a4afcc0a685281756bc3258baa
+   > transaction hash:    0x324099d8251bcd6b08a508df2efc6a29550693acf76c0f879d014d87ec5d8272
    > Blocks: 0            Seconds: 0
-   > contract address:    0x7C6f60415F334a99f07776a05106C4fB374EEbc4
-   > block number:        198
-   > block timestamp:     1679693917
+   > contract address:    0xC1CAf4Ee1a05b2B75352B9714C74D958C5990134
+   > block number:        8
+   > block timestamp:     1679815262
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.88302221157788847       
+   > balance:             99.981056648814568747
    > gas used:            807483 (0xc523b)
-   > gas price:           2.500000008 gwei
+   > gas price:           2.92803441 gwei
    > value sent:          0 ETH
-   > total cost:          0.002018707506459864 ETH   
+   > total cost:          0.00236433800949003 ETH
 
-Ballot contract address: 0x7D23aB17E2300ECd3594FEbFb501cCFd8210aacB
-Voter contract address: 0x7C6f60415F334a99f07776a05106C4fB374EEbc4
+Ballot contract address: 0xF9EDECBa2b586E22219B7c27488f72A222a0873A
+Voter contract address: 0xC1CAf4Ee1a05b2B75352B9714C74D958C5990134
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.004816360015412352 ETH        
+   > Total cost:     0.004468135882844565 ETH
 
 
 1679689561_next_deployed_contracts3.js
@@ -175,38 +175,38 @@ Voter contract address: 0x7C6f60415F334a99f07776a05106C4fB374EEbc4
 
    Replacing 'Ballot'
    ------------------
-   > transaction hash:    0xdf68384c573523caea1aff3e5b22e96a813d2bef8492f2a03e4c3f2deeaec3e9
+   > transaction hash:    0x4198480800a237fa8ccb46800c993793bdd370601f0f5eb81442750cc7a4ce12
    > Blocks: 0            Seconds: 0
-   > contract address:    0xF3FbE9987F93A3fEBe6E1e04405627f4c03298E6
-   > block number:        199
-   > block timestamp:     1679693917
+   > contract address:    0x000b93ffEd4F44eeB4010D8c67862B14531D977f
+   > block number:        9
+   > block timestamp:     1679815262
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.880224559068935982      
-   > gas used:            1119061 (0x111355)
-   > gas price:           2.500000008 gwei
+   > balance:             99.979014745277977156
+   > gas used:            707181 (0xaca6d)
+   > gas price:           2.887384611 gwei
    > value sent:          0 ETH
-   > total cost:          0.002797652508952488 ETH   
+   > total cost:          0.002041903536591591 ETH
 
 
    Replacing 'Voter'
    -----------------
-   > transaction hash:    0x93a6c82ee22a804fb38af75cdebcfcc37ad6414d7e06b5d95cfc16f4287aeca6
+   > transaction hash:    0x0bd374e2b1dc00ca3faf9e035edabb3e198ac34714da7889298447d990065f2a
    > Blocks: 0            Seconds: 0
-   > contract address:    0x04415A4b7c521600FDB12e436aE711C4e9B6eC5f
-   > block number:        200
-   > block timestamp:     1679693918
+   > contract address:    0xD25a5C99eB519Eb7CA4d89Af23997eeE4Ef1E36e
+   > block number:        10
+   > block timestamp:     1679815262
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.878205851562476118      
-   > gas used:            807483 (0xc523b)
-   > gas price:           2.500000008 gwei
+   > balance:             99.976714139138634673
+   > gas used:            807471 (0xc522f)
+   > gas price:           2.849150173 gwei
    > value sent:          0 ETH
-   > total cost:          0.002018707506459864 ETH   
+   > total cost:          0.002300606139342483 ETH
 
-Ballot contract address: 0xF3FbE9987F93A3fEBe6E1e04405627f4c03298E6
-Voter contract address: 0x04415A4b7c521600FDB12e436aE711C4e9B6eC5f
+Ballot contract address: 0x000b93ffEd4F44eeB4010D8c67862B14531D977f
+Voter contract address: 0xD25a5C99eB519Eb7CA4d89Af23997eeE4Ef1E36e
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.004816360015412352 ETH        
+   > Total cost:     0.004342509675934074 ETH
 
 
 1679691816_next_deployed_contracts4.js
@@ -214,46 +214,193 @@ Voter contract address: 0x04415A4b7c521600FDB12e436aE711C4e9B6eC5f
 
    Replacing 'Ballot'
    ------------------
-   > transaction hash:    0xf63cdbe20de02792d1bc863351078cd91d81de50447a0cd3ba431f22d7eafc9c
+   > transaction hash:    0x8d241b172e5a391483fc54e0a7384e04fac53e9867bd8c9514ca27f8450b4144
    > Blocks: 0            Seconds: 0
-   > contract address:    0xd3916b9a9096915Ef04297D0F660Ec6efF48719a
-   > block number:        201
-   > block timestamp:     1679693918
+   > contract address:    0x5166f603A41C2205452CfCE2aAE5C492d9d97d1B
+   > block number:        11
+   > block timestamp:     1679815262
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.87540819905352363       
-   > gas used:            1119061 (0x111355)
-   > gas price:           2.500000008 gwei
+   > balance:             99.974722723285364095
+   > gas used:            707181 (0xaca6d)
+   > gas price:           2.815991738 gwei
    > value sent:          0 ETH
-   > total cost:          0.002797652508952488 ETH   
+   > total cost:          0.001991415853270578 ETH
 
 
    Replacing 'Voter'
    -----------------
-   > transaction hash:    0x59af2b2328540cf46797160beadf6dfbbfc9f6a2a6ab778c2c9bfd79c863080b
+   > transaction hash:    0x2f2612744d11c9b7d24782a45c3c777dcd5c803c9aa1aedd221c43ec149df2c2
    > Blocks: 0            Seconds: 0
-   > contract address:    0xF75c95E3f692fb561826f57026940C9F76C862Db
-   > block number:        202
-   > block timestamp:     1679693918
+   > contract address:    0xBD34A1e772f88D9185578D7e0287A8C6fEa9Ab29
+   > block number:        12
+   > block timestamp:     1679815262
    > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
-   > balance:             99.873389491547063766      
+   > balance:             99.972474041640084478
    > gas used:            807483 (0xc523b)
-   > gas price:           2.500000008 gwei
+   > gas price:           2.784803699 gwei
    > value sent:          0 ETH
-   > total cost:          0.002018707506459864 ETH   
+   > total cost:          0.002248681645279617 ETH
 
-Ballot contract address: 0xd3916b9a9096915Ef04297D0F660Ec6efF48719a
-Voter contract address: 0xF75c95E3f692fb561826f57026940C9F76C862Db
+Ballot contract address: 0x5166f603A41C2205452CfCE2aAE5C492d9d97d1B
+Voter contract address: 0xBD34A1e772f88D9185578D7e0287A8C6fEa9Ab29
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.004816360015412352 ETH        
+   > Total cost:     0.004240097498550195 ETH
 
 
 1679693903_next_deployed_contracts6.js
 ======================================
+
+   Replacing 'Ballot'
+   ------------------
+   > transaction hash:    0x11f20e2c93fd7f8cd965baebd6f0d6ffe4752c5a73f7ae36765967385c085ac3
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x70B39cc69f231660b6354152C73e8afFC393D366
+   > block number:        13
+   > block timestamp:     1679815263
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.970523808775022368
+   > gas used:            707181 (0xaca6d)
+   > gas price:           2.75775631 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00195023286506211 ETH
+
+
+   Replacing 'Voter'
+   -----------------
+   > transaction hash:    0xe5110b6f17c9fecf49573f17e32060347deae78aaf6419ce2b2fcf630949d79d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x147673C00a93E0e8F55389543dD661DB5015dACb
+   > block number:        14
+   > block timestamp:     1679815263
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.968317510018865116
+   > gas used:            807483 (0xc523b)
+   > gas price:           2.732316044 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002206298756157252 ETH
+
+Ballot contract address: 0x70B39cc69f231660b6354152C73e8afFC393D366
+Voter contract address: 0x147673C00a93E0e8F55389543dD661DB5015dACb
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.004156531621219362 ETH
+
+
+1679812653_next_deployed_contracts_final.js
+===========================================
+
+   Replacing 'Ballot'
+   ------------------
+   > transaction hash:    0x2a5ca974bd9f25122a41fae7591bc0d3befc769fed7776e90f7b666035007e49
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2564db204382f7ae80aB7Ab45f457800F72b1a1e
+   > block number:        15
+   > block timestamp:     1679815263
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.966400870357995205
+   > gas used:            707181 (0xaca6d)
+   > gas price:           2.710253331 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001916639660869911 ETH
+
+
+   Replacing 'Voter'
+   -----------------
+   > transaction hash:    0x799bc0c09df1f88decdff73e6823edc71bd06b747bbf5dd4d3f7622b3000102f
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xd65be4dC68D920d39d3bb194F452018861834d05
+   > block number:        16
+   > block timestamp:     1679815263
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.964229175846262858
+   > gas used:            807471 (0xc522f)
+   > gas price:           2.689501557 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002171694511732347 ETH
+
+Ballot contract address: 0x2564db204382f7ae80aB7Ab45f457800F72b1a1e
+Voter contract address: 0xd65be4dC68D920d39d3bb194F452018861834d05
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.004088334172602258 ETH
+
+
+1679813552_next_deployed_contracts_final2.js
+============================================
+
+   Replacing 'Ballot'
+   ------------------
+   > transaction hash:    0xc17640545fbf759dd60c2af80e08d918650da5b161ab29286eadc7793b64d075
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x64cD7345154683390a7D3739E9f6254131227aa1
+   > block number:        17
+   > block timestamp:     1679815263
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.96233993841878023
+   > gas used:            707181 (0xaca6d)
+   > gas price:           2.671504788 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001889237427482628 ETH
+
+
+   Replacing 'Voter'
+   -----------------
+   > transaction hash:    0x5ea93801b0284b7c452c9c64efb8b3c84e4e2750045a374eaeec26b8e42f879a
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x7953C0A75fc8c913551667212659a3A8f345bEd4
+   > block number:        18
+   > block timestamp:     1679815263
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.960196412253299431
+   > gas used:            807483 (0xc523b)
+   > gas price:           2.654577453 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002143526165480799 ETH
+
+Ballot contract address: 0x64cD7345154683390a7D3739E9f6254131227aa1
+Voter contract address: 0x7953C0A75fc8c913551667212659a3A8f345bEd4
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.004032763592963427 ETH
+
+
+1679814868_next_deployed_contracts_final3.js
+============================================
+
+   Replacing 'Ballot'
+   ------------------
+   > transaction hash:    0x292259fd14d3d917fcc37ddca056454f5e597e9e872706e5a4f5179fbb929fb4
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x5E71f9171C128a0486a4602b5bf723DB311A1E74
+   > block number:        19
+   > block timestamp:     1679815264
+   > account:             0xA39491eB8aB6856Ffc057d7E16dF0A781e7D4823
+   > balance:             99.958329526927639171
+   > gas used:            707181 (0xaca6d)
+   > gas price:           2.63989746 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00186688532566026 ETH
+
+
+   Replacing 'Voter'
+   -----------------
+   > transaction hash:    0x47bb13f11aa0344781588c8d3e8bb3d75752fcac3565c0e86a14c5d58418865b
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x45f8A04CF01989b2921fF621C19c055968b75c82
+   > block number:        20
+   > block timestamp:     1679815264
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.003987408142339782 ETH
+
+
+1679815249_next_deployed_contracts_final4.js
+============================================
    -------------------------------------
    > Total cost:                   0 ETH
 
 Summary
 =======
-> Total deployments:   12
-> Final cost:          0.028898160092474112 ETH 
+> Total deployments:   20
+> Final cost:          0.043790995889040351 ETH

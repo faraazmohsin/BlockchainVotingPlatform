@@ -86,7 +86,7 @@ export function Register(_props) {
         }
 
         web3 = new Web3(provider);
-        const voterAddress = '0xF75c95E3f692fb561826f57026940C9F76C862Db';
+        const voterAddress = '0x45f8A04CF01989b2921fF621C19c055968b75c82';
         const voterContract = new web3.eth.Contract(VoterContract.abi, voterAddress);
         const accounts = await web3.eth.getAccounts();
 
@@ -100,7 +100,7 @@ export function Register(_props) {
         }
         else {
 
-            await voterContract.methods.registerUser(nameHash, emailHash).send({ from: accounts[2], gas: 250000 });
+            await voterContract.methods.registerUser(nameHash, emailHash).send({ from: accounts[1], gas: 250000 });
             console.log(`Name: ${name}, Email: ${email}`);
 
         }
