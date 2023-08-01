@@ -117,7 +117,7 @@ export function Home() {
     }
 
     await ballotContract.methods.castVote(selectedCandidate).send({
-      from: accounts[1],
+      from: accounts[2],
     });
     
     navigate('/end');

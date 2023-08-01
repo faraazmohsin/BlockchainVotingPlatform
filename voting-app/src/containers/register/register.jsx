@@ -100,7 +100,7 @@ export function Register(_props) {
         }
         else {
 
-            await voterContract.methods.registerUser(nameHash, emailHash).send({ from: accounts[1], gas: 250000 });
+            await voterContract.methods.registerUser(nameHash, emailHash).send({ from: accounts[2], gas: 250000 });
             console.log(`Name: ${name}, Email: ${email}`);
 
         }
